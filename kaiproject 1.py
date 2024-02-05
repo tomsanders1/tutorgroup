@@ -25,6 +25,9 @@ def EnterDetails():
         HomeAddress = str(input("Enter Home Address: "))
         PhoneNum = str(input("Enter Phone Number: "))
         Gender = str(input("Enter Gender: "))
+        if Gender != 'male' or 'female':
+            print('Student gender defined incorrectly')
+            EnterDetails()
         Tutor = str(input("Enter Tutor Group: "))
 
         writer.writerow([UniqueID, Surname, Forename, DateOfBirth, HomeAddress, PhoneNum, Gender, Tutor])
