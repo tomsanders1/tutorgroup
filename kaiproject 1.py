@@ -12,7 +12,7 @@ def LoginPage():
         else:
             print("Incorrect username or password. Please try again.")
 
-
+#Student / Teacher login page
 
 def EnterDetails():
     with open("Students.csv", mode='a', newline='') as file:
@@ -32,7 +32,7 @@ def EnterDetails():
 
         writer.writerow([UniqueID, Surname, Forename, DateOfBirth, HomeAddress, PhoneNum, Gender, Tutor])
         print("Student Details Added")
-
+#gathers students details in the systems abd checks if they match before deciding if the user is authorised or not
 def ViewDetails():
     try:
         with open("Students.csv", mode='r') as file:
